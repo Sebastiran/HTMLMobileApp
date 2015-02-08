@@ -37,16 +37,18 @@
 			<article data-role="content">
 				<ul data-role="listview" data-filter="true">
 					<li>
-						<a href="#demon-gate"> <h1>NetherPortal</h1> <img src="images/gate1.jpg" alt="GATE" />
-						</a>
+						<a href="#demon-gate" data-transition="slide"> <h1>NetherPortal</h1> <img src="images/gate1.jpg" class="fullscreen" alt="GATE" /> </a>
 					</li>
 					<li>
-						<a href="#mushroom"> <h1>Mushroom Island</h1> <img src="images/mushroomIsland.jpg" alt="SHROOMS" />
-						</a>
+						<a href="#mushroom" data-transition="slide"> <h1>Mushroom Island</h1> <img src="images/mushroomIsland.jpg" class="fullscreen" alt="SHROOMS" /> </a>
+					</li>
+					<li>
+						<a href="#glass-tree" data-transition="slide"> <h1>Glass Tree</h1> <img src="images/GlassTree.jpg" class="fullscreen" alt="TREE" /> </a>
 					</li>
 				</ul>
 			</article>
 		</div><!-- Home page -->
+		
 		<div data-role="page" id="demon-gate" data-theme="d">
 			<header data-role="header">
 				<h1>Minespiration</h1>
@@ -92,5 +94,24 @@
 			</header>
 			<img src="images/mushroomIsland.jpg" class="fullscreen" alt="GATE" />
 		</div><!-- Mushroom Island-->
+		<div data-role="page" id="glass-tree" data-theme="d">
+			<header data-role="header">
+				<h1>Minespiration</h1>
+				<nav data-role="navbar">
+					<ul>
+						<li>
+							<a href="#home" data-icon="home">Home</a>
+						</li>
+						<li>
+							<a href="#mushroom" data-icon="grid">Sort by</a>
+						</li>
+						<li>
+							<a href="info" data-icon="info">Post your own</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<img src="images/GlassTree.jpg" class="fullscreen" alt="GATE" />
+		</div><!-- Glass Tree-->
 	</body>
 </html>
