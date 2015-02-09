@@ -18,21 +18,9 @@
 	</head>
 	<body>
 		<div data-role="page" id="home" data-theme="d">
-			<header data-role="header">
+			<header data-role="header" data-position="fixed">
 				<h1>Minesperation</h1>
-				<nav data-role="navbar">
-					<ul>
-						<li>
-							<a href="#home" data-icon="home">Home</a>
-						</li>
-						<li>
-							<a href="#mushroom" data-icon="grid">Sort by</a>
-						</li>
-						<li>
-							<a href="info" data-icon="info">Post your own</a>
-						</li>
-					</ul>
-				</nav>
+				<a href="#" class="ui-btn-right" data-icon="grid" data-transition="slide">Post your own!</a>
 			</header>
 			<article data-role="content">
 				<ul data-role="listview" data-filter="true">
@@ -45,73 +33,55 @@
 					<li>
 						<a href="#glass-tree" data-transition="slide"> <h1>Glass Tree</h1> <img src="images/GlassTree.jpg" class="fullscreen" alt="TREE" /> </a>
 					</li>
+					<li>
+						<a href="#water-base" data-transition="slide"> <h1>Under Water Temple Base</h1> <iframe width="560" height="315" src="https://www.youtube.com/embed/BgKiPONu4_Q" frameborder="0" allowfullscreen></iframe> </a>
+					</li>
 				</ul>
 			</article>
 		</div><!-- Home page -->
-		
+
 		<div data-role="page" id="demon-gate" data-theme="d">
 			<header data-role="header">
 				<h1>Minespiration</h1>
-				<nav data-role="navbar">
-					<ul>
-						<li>
-							<a href="#home" data-icon="home">Home</a>
-						</li>
-						<li>
-							<a href="#mushroom" data-icon="grid">Sort by</a>
-						</li>
-						<li>
-							<a href="info" data-icon="info">Post your own</a>
-						</li>
-					</ul>
-				</nav>
+				<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
 			</header>
-			<img src="images/gate1.jpg" class="fullscreen" alt="GATE" />
-			<img src="images/gate2.jpg" class="fullscreen" alt="GATE" />
-			<img src="images/gate3.jpg" class="fullscreen" alt="GATE" />
-			<img src="images/gate4.jpg" class="fullscreen" alt="GATE" />
-			<img src="images/gate5.jpg" class="fullscreen" alt="GATE" />
-			<img src="images/gate6.jpg" class="fullscreen" alt="GATE" />
-			<img src="images/gate7.jpg" class="fullscreen" alt="GATE" />
-			<img src="images/gate8.jpg" class="fullscreen" alt="GATE" />
+			<center>
+				<img src="images/gate1.jpg" class="fullscreen" alt="GATE" />
+				<img src="images/gate2.jpg" class="fullscreen" alt="GATE" />
+				<img src="images/gate3.jpg" class="fullscreen" alt="GATE" />
+				<img src="images/gate4.jpg" class="fullscreen" alt="GATE" />
+				<img src="images/gate5.jpg" class="fullscreen" alt="GATE" />
+				<img src="images/gate6.jpg" class="fullscreen" alt="GATE" />
+				<img src="images/gate7.jpg" class="fullscreen" alt="GATE" />
+				<img src="images/gate8.jpg" class="fullscreen" alt="GATE" />
+			</center>
 		</div><!-- Demon's Gate-->
 		<div data-role="page" id="mushroom" data-theme="d">
 			<header data-role="header">
 				<h1>Minespiration</h1>
-				<nav data-role="navbar">
-					<ul>
-						<li>
-							<a href="#home" data-icon="home">Home</a>
-						</li>
-						<li>
-							<a href="#mushroom" data-icon="grid">Sort by</a>
-						</li>
-						<li>
-							<a href="info" data-icon="info">Post your own</a>
-						</li>
-					</ul>
-				</nav>
+				<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
 			</header>
-			<img src="images/mushroomIsland.jpg" class="fullscreen" alt="GATE" />
+			<center>
+				<img src="images/mushroomIsland.jpg" class="fullscreen" alt="GATE" />
+			</center>
 		</div><!-- Mushroom Island-->
 		<div data-role="page" id="glass-tree" data-theme="d">
 			<header data-role="header">
 				<h1>Minespiration</h1>
-				<nav data-role="navbar">
-					<ul>
-						<li>
-							<a href="#home" data-icon="home">Home</a>
-						</li>
-						<li>
-							<a href="#mushroom" data-icon="grid">Sort by</a>
-						</li>
-						<li>
-							<a href="info" data-icon="info">Post your own</a>
-						</li>
-					</ul>
-				</nav>
+				<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
 			</header>
-			<img src="images/GlassTree.jpg" class="fullscreen" alt="GATE" />
+			<center>
+				<img src="images/GlassTree.jpg" class="fullscreen" alt="GATE" />
+			</center>
+		</div><!-- Glass Tree-->
+		<div data-role="page" id="water-base" data-theme="d">
+			<header data-role="header">
+				<h1>Minespiration</h1>
+				<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
+			</header>
+			<center>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/BgKiPONu4_Q" frameborder="0" allowfullscreen></iframe>
+			</center>
 		</div><!-- Glass Tree-->
 	</body>
 </html>
