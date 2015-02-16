@@ -1,0 +1,15 @@
+<header data-role="header">
+	<h1 style="text-align:left; margin-left:10px;">Minesperation</h1>
+	<div class="ui-btn ui-btn-right">
+		<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
+	</div>
+</header>
+<article>
+	<center>
+		<h4 style="text-align:left; margin-left:10px;">The Gate</h4>
+		<div class="ui-body ui-body-a ui-corner-all">
+			<img src="images/gate1.jpg" class="fullscreen" alt="GATE" />
+			<img src="images/gate2.jpg" class="fullscreen" alt="GATE" />
+		</div>
+	</center>
+</article>

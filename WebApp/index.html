@@ -11,30 +11,37 @@
 		<style>
 			img.fullscreen {
 				max-height: 100%;
+				max-width: 90%;
+			}
+			img.thumbnail {
+				max-height: 100%;
 				max-width: 100%;
+			}
+			img.smallThumbnail {
+				height: 200%;
+				width: 100%;
 			}
 		</style>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
 		<div data-role="page" id="home" data-theme="d">
-			<header data-role="header" data-position="fixed">
-				<h1>Minesperation</h1>
-				<a href="#post" class="ui-btn-right" data-icon="grid" data-transition="slide">Post your own!</a>
+			<header data-role="header">
+				<h1 style="text-align:left; margin-left:10px;">Minesperation</h1>
 			</header>
 			<article data-role="content">
 				<ul data-role="listview" data-filter="true">
 					<li>
-						<a href="#demon-gate" data-transition="slide"> <h1>NetherPortal</h1> <img src="images/gate1.jpg" class="fullscreen" alt="GATE" /> </a>
+						<a href="#demon-gate" data-transition="slide"> <h1>NetherPortal</h1> <img src="images/gate1.jpg" class="thumbnail" alt="GATE" /> </a>
 					</li>
 					<li>
-						<a href="#mushroom" data-transition="slide"> <h1>Mushroom Island</h1> <img src="images/mushroomIsland.jpg" class="fullscreen" alt="SHROOMS" /> </a>
+						<a href="#mushroom" data-transition="slide"> <h1>Mushroom Island</h1> <img src="images/mushroomIsland.jpg" class="thumbnail" alt="SHROOMS" /> </a>
 					</li>
 					<li>
-						<a href="#glass-tree" data-transition="slide"> <h1>Glass Tree</h1> <img src="images/GlassTree.jpg" class="fullscreen" alt="TREE" /> </a>
+						<a href="#glass-tree" data-transition="slide"> <h1>Glass Tree</h1> <img src="images/GlassTree.jpg" class="smallThumbnail" alt="TREE" /> </a>
 					</li>
 					<li>
-						<a href="#temple" data-transition="slide"> <h1>Jungle Temple</h1> <img src="images/temple1.jpg" class="fullscreen" alt="TEMPLE" /> </a>
+						<a href="#temple" data-transition="slide"> <h1>Jungle Temple</h1> <img src="images/temple1.jpg" class="thumbnail" alt="TEMPLE" /> </a>
 					</li>
 				</ul>
 			</article>
@@ -47,17 +54,35 @@
 			</header>
 			<article>
 				<center>
-					<h4>The Gate</h4>
-					<div class="ui-body ui-body-a ui-corner-all">
-						<img src="images/gate1.jpg" class="fullscreen" alt="GATE" />
-						<img src="images/gate2.jpg" class="fullscreen" alt="GATE" />
-						<img src="images/gate3.jpg" class="fullscreen" alt="GATE" />
-						<img src="images/gate4.jpg" class="fullscreen" alt="GATE" />
-						<img src="images/gate5.jpg" class="fullscreen" alt="GATE" />
-						<img src="images/gate6.jpg" class="fullscreen" alt="GATE" />
-						<img src="images/gate7.jpg" class="fullscreen" alt="GATE" />
-						<img src="images/gate8.jpg" class="fullscreen" alt="GATE" />
-					</div>
+					<p></p>
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							</div>
+							<div class="ui-block-b">
+								<div class="ui-bar ui-bar-a">
+									<p>
+										The Gate
+										<br>
+										Author: Unkown
+										<br>
+										Minecraft version: 1.8.1
+										<br>
+										Build in: Creative, Multiplayer
+									</p>
+								</div>
+							</div>
+						</div>
+						<p></p>
+						<div class="ui-grid-solo">
+							<img src="images/gate1.jpg" class="fullscreen" alt="GATE" />
+							<img src="images/gate2.jpg" class="fullscreen" alt="GATE" />
+							<img src="images/gate3.jpg" class="fullscreen" alt="GATE" />
+							<img src="images/gate4.jpg" class="fullscreen" alt="GATE" />
+							<img src="images/gate5.jpg" class="fullscreen" alt="GATE" />
+							<img src="images/gate6.jpg" class="fullscreen" alt="GATE" />
+							<img src="images/gate7.jpg" class="fullscreen" alt="GATE" />
+							<img src="images/gate8.jpg" class="fullscreen" alt="GATE" />
+						</div>
 				</center>
 			</article>
 		</div><!-- Demon's Gate-->
@@ -97,23 +122,18 @@
 					<h4>A temple in the jungle</h4>
 					<div class="ui-body ui-body-a ui-corner-all">
 						<img src="images/temple1.jpg" class="fullscreen" alt="TEMPLE" />
-						<p>The Entrance</p>
+						<p>
+							The Entrance
+						</p>
 						<img src="images/temple2.jpg" class="fullscreen" alt="TEMPLE" />
-						<p>Main hall</p>
+						<p>
+							Main hall
+						</p>
 						<img src="images/temple3.jpg" class="fullscreen" alt="TEMPLE" />
 					</div>
 				</center>
 			</article>
 		</div><!--Jungle Temple-->
-	
-		<div data-role="page" id="post" data-theme="d">
-			<header data-role="header">
-				<h1>Minespiration</h1>
-				<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
-			</header>
-			<article>
-				
-			</article>
-		</div><!--Post Your Own-->
+
 	</body>
 </html>
