@@ -8,20 +8,8 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<style>
-			img.fullscreen {
-				max-height: 100%;
-				max-width: 90%;
-			}
-			img.thumbnail {
-				max-height: 100%;
-				max-width: 100%;
-			}
-			img.smallThumbnail {
-				height: 200%;
-				width: 100%;
-			}
-		</style>
+		
+		<link rel="stylesheet" href="styles.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
@@ -32,108 +20,22 @@
 			<article data-role="content">
 				<ul data-role="listview" data-filter="true">
 					<li>
-						<a href="#demon-gate" data-transition="slide"> <h1>NetherPortal</h1> <img src="images/gate1.jpg" class="thumbnail" alt="GATE" /> </a>
+						<a href="gate.html" rel="external" data-transition="slide"> <h1>NetherPortal</h1> <img src="images/gate1.jpg" class="thumbnail" alt="GATE" /> </a>
 					</li>
 					<li>
-						<a href="#mushroom" data-transition="slide"> <h1>Mushroom Island</h1> <img src="images/mushroomIsland.jpg" class="thumbnail" alt="SHROOMS" /> </a>
+						<a href="mushroom.html" rel="external" data-transition="slide"> <h1>Mushroom Island</h1> <img src="images/mushroomIsland.jpg" class="thumbnail" alt="SHROOMS" /> </a>
 					</li>
 					<li>
-						<a href="#glass-tree" data-transition="slide"> <h1>Glass Tree</h1> <img src="images/GlassTree.jpg" class="smallThumbnail" alt="TREE" /> </a>
+						<a href="glassTree.html" rel="external" data-transition="slide"> <h1>Glass Tree</h1> <img src="images/GlassTree.jpg" class="smallThumbnail" alt="TREE" /> </a>
 					</li>
 					<li>
-						<a href="#temple" data-transition="slide"> <h1>Jungle Temple</h1> <img src="images/temple1.jpg" class="thumbnail" alt="TEMPLE" /> </a>
+						<a href="temple.html" rel="external" data-transition="slide"> <h1>Jungle Temple</h1> <img src="images/temple1.jpg" class="thumbnail" alt="TEMPLE" /> </a>
+					</li>
+					<li>
+						<a href="testPost.html" rel="external" data-transition="slide"> <h1>Windmill</h1> <img src="images/Windmill.jpg" class="thumbnail" alt="MILL" /> </a>
 					</li>
 				</ul>
 			</article>
 		</div><!-- Home page -->
-
-		<div data-role="page" id="demon-gate" data-theme="d">
-			<header data-role="header">
-				<h1>Minespiration</h1>
-				<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
-			</header>
-			<article>
-				<center>
-					<p></p>
-					<div class="ui-grid-a">
-						<div class="ui-block-a">
-							</div>
-							<div class="ui-block-b">
-								<div class="ui-bar ui-bar-a">
-									<p>
-										The Gate
-										<br>
-										Author: Unkown
-										<br>
-										Minecraft version: 1.8.1
-										<br>
-										Build in: Creative, Multiplayer
-									</p>
-								</div>
-							</div>
-						</div>
-						<p></p>
-						<div class="ui-grid-solo">
-							<img src="images/gate1.jpg" class="fullscreen" alt="GATE" />
-							<img src="images/gate2.jpg" class="fullscreen" alt="GATE" />
-							<img src="images/gate3.jpg" class="fullscreen" alt="GATE" />
-							<img src="images/gate4.jpg" class="fullscreen" alt="GATE" />
-							<img src="images/gate5.jpg" class="fullscreen" alt="GATE" />
-							<img src="images/gate6.jpg" class="fullscreen" alt="GATE" />
-							<img src="images/gate7.jpg" class="fullscreen" alt="GATE" />
-							<img src="images/gate8.jpg" class="fullscreen" alt="GATE" />
-						</div>
-				</center>
-			</article>
-		</div><!-- Demon's Gate-->
-		<div data-role="page" id="mushroom" data-theme="d">
-			<header data-role="header">
-				<h1>Minespiration</h1>
-				<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
-			</header>
-			<article>
-				<center>
-					<div class="ui-body ui-body-a ui-corner-all">
-						<img src="images/mushroomIsland.jpg" class="fullscreen" alt="GATE" />
-					</div>
-				</center>
-			</article>
-		</div><!-- Mushroom Island-->
-		<div data-role="page" id="glass-tree" data-theme="d">
-			<header data-role="header">
-				<h1>Minespiration</h1>
-				<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
-			</header>
-			<article>
-				<center>
-					<div class="ui-body ui-body-a ui-corner-all">
-						<img src="images/GlassTree.jpg" class="fullscreen" alt="GATE" />
-					</div>
-				</center>
-			</article>
-		</div><!-- Glass Tree-->
-		<div data-role="page" id="temple" data-theme="d">
-			<header data-role="header">
-				<h1>Minespiration</h1>
-				<a href="#home" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
-			</header>
-			<article>
-				<center>
-					<h4>A temple in the jungle</h4>
-					<div class="ui-body ui-body-a ui-corner-all">
-						<img src="images/temple1.jpg" class="fullscreen" alt="TEMPLE" />
-						<p>
-							The Entrance
-						</p>
-						<img src="images/temple2.jpg" class="fullscreen" alt="TEMPLE" />
-						<p>
-							Main hall
-						</p>
-						<img src="images/temple3.jpg" class="fullscreen" alt="TEMPLE" />
-					</div>
-				</center>
-			</article>
-		</div><!--Jungle Temple-->
-
 	</body>
 </html>

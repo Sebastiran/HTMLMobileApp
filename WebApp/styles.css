@@ -1,0 +1,12 @@
+img.fullscreen {
+	max-height: 100%;
+	max-width: 90%;
+}
+img.thumbnail {
+	max-height: 100%;
+	max-width: 100%;
+}
+img.smallThumbnail {
+	height: 200%;
+	width: 100%;
+}
