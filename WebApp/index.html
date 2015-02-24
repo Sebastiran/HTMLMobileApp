@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		
+		<script src="localStorage.js"></script>
 		<link rel="stylesheet" href="styles.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
@@ -19,7 +19,7 @@
 				<a href="post.html" rel="external" data-icon="grid" data-transition="slide">Post your own!</a>
 			</header>
 			<article data-role="content">
-				<ul data-role="listview" data-filter="true">
+				<ul id="items" data-role="listview" data-filter="true" data-inset="true">
 					<li>
 						<a href="pages/gate.html" rel="external" data-transition="slide"> <h1>NetherPortal</h1> <img src="images/gate1.jpg" class="thumbnail" alt="GATE" /> </a>
 						<p style="display: none">Nether, Portal</p>
@@ -58,6 +58,6 @@
 					</li>
 				</ul>
 			</article>
-		</div><!-- Home page -->
+		</div>
 	</body>
 </html>
