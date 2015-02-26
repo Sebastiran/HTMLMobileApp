@@ -1,44 +1,36 @@
 function submit() {
-	//Clear the list of objects
-	localStorage.removeItem("objects");
+	//localStorage.removeItem("list");
 	// Retrieve the entered form data
 	var title = $('[name="title"]').val();
 	var creator = $('[name="creator"]').val();
 	var version = $('[name="version"]').val();
 	var text = $('[name="text"]').val();
-	// Fetch the existing objects
-	var objects = getObjects();
-	// Push the new item into the existing list
-	objects.push(title, creator, version, text);
-	// Clear the images list for the next use
-	//localStorage.removeItem("images");
-	// Store the new list
-	saveObjects(objects);
+
+	var data = new Array();
+	var list = getList();
+	var img = getImages();
+	// Push the new items into the existing list
+	data.push({
+		title : title,
+		creator : creator,
+		version : version,
+		text : text,
+		img : img
+	});
+	//Add the objects array to the list of pages
+	list.push(data);
+	saveList(list);
+
+	localStorage.removeItem("images");
 	// Reload the page to show the new objects
 	window.location.reload();
-}
-
-function getObjects() {
-	// See if objects is inside localStorage
-	if (localStorage.getItem("objects")) {
-		// If yes, then load the objects
-		objects = JSON.parse(localStorage.getItem("objects"));
-	} else {
-		// Make a new array of objects
-		objects = new Array();
-	}
-	return objects;
-}
-
-function saveObjects(objects) {
-	// Save the list into localStorage
-	localStorage.setItem("objects", JSON.stringify(objects));
 }
 
 function addImage() {
 	// Retrieve the entered form data
 	var image = $('[name="img"]').val();
 	// Fetch the existing objects
+
 	var images = getImages();
 	// Push the new item into the existing list
 	images.push({
@@ -67,6 +59,23 @@ function saveImages(images) {
 	localStorage.setItem("images", JSON.stringify(images));
 }
 
+function getList() {
+	// See if objects is inside localStorage
+	if (localStorage.getItem("list")) {
+		// If yes, then load the objects
+		list = JSON.parse(localStorage.getItem("list"));
+	} else {
+		// Make a new array of objects
+		list = new Array();
+	}
+	return list;
+}
+
+function saveList(list) {
+	// Save the list into localStorage
+	localStorage.setItem("list", JSON.stringify(list));
+}
+
 function postpage() {
 	// Fetch the existing objects
 	images = getImages();
@@ -75,8 +84,8 @@ function postpage() {
 	// Add every object to the objects list
 	$.each(images, function(index, item) {
 		var str = item.image;
-		var split =	str.split("\\");
-		element = '<li>' + split[split.length-1] + '</li>';
+		var split = str.split("\\");
+		element = '<li>' + split[split.length - 1] + '</li>';
 		$('#images').append(element);
 	});
 
@@ -84,19 +93,21 @@ function postpage() {
 	$('#images').listview("refresh");
 }
 
+
 $(document).on('pagebeforeshow', '#post', function(event) {
 	postpage();
 });
 
 function homepage() {
 	// Fetch the existing objects
-	objects = getObjects();
-	images = getImages();
-	// Clear the list
-	//$('#items').find('li').remove();
+	list = getList();
+	// Clear the list of items already displayed on the homepage
+	$('#items').find('li').remove();
 	// Show the title and the first images
-	element = '<li>' + '<h1>' + objects[0] + '</h1>' + '<img src=' + images[0] + 'class="thumbnail" />' + '</li>';
-	$('#items').append(element);
+	$.each(list, function(index, item) {
+		element = '<li> <a href="page.html" rel="external" data-transition="slide" onclick="pagepage();"> <h1>' + item[0].title + '</h1> <img src=' + item[0].img.src + 'class="thumbnail" /> </a> </li>';
+		$('#items').append(element);
+	});
 
 	$('#items').listview();
 	$('#items').listview("refresh");
@@ -105,4 +116,21 @@ function homepage() {
 
 $(document).on('pagebeforeshow', '#home', function(event) {
 	homepage();
+});
+
+function pagepage() {
+	$("li").click(function() {
+		var str = $(this).index();
+	});
+	
+	list = getList();
+	var element = list[0].title + '<br>' + 'Creator: ' + list[0].creator + '<br>' + 'Minecraftversion: ' + list[0].version;
+	$('#info1').append(element);
+	element = list[0].text;
+	$('#info2').append(element);
+}
+
+
+$(document).on('pagebeforeshow', '#page', function(event) {
+	pagepage();
 });

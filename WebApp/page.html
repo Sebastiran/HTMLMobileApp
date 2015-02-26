@@ -13,25 +13,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
-		<div data-role="page" id="post" data-theme="d">
+		<div data-role="page" id="page" data-theme="d">
 			<header data-role="header">
 				<h1>Minespiration</h1>
 				<a href="index.html" rel="external" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
 			</header>
-			<div data-role="content">
-				<label for="item-1">Title</label>
-				<input type="text" name="title" id="item-1" placeholder="">
-				<label for="item-2">Creator(s)</label>
-				<input type="text" name="creator" id="item-2" placeholder="">
-				<label for="item-3">Minecraft version build</label>
-				<input type="text" name="version" id="item-3" placeholder="">
-				<label for="item-4">Textfield</label>
-				<input type="text" name="text" id="item-4" placeholder="type your text here..">
-				<label for="item-5">Select image(s)</label>
-				<input type="file" name="img" id="item-5" onchange="addImage();">
-				<ul id="images" data‐role="listview" data‐inset="true"></ul>
-				<input type="image" name="submit" id="submit" onclick="submit();">
-			</div>
+			<article>
+				<center>
+					<p></p>
+					<div class="info">
+						<div class="ui-bar ui-bar-a">
+							<p id="info1">
+								
+							</p>
+						</div>
+						<p id="info2">
+						</p>
+					</div>
+					<p></p>
+					<ul id="info3" data‐role="listview" data‐inset="true"></ul>
+					<img src="#" class="fullscreen"/>
+				</center>
+			</article>
 		</div>
 	</body>
 </html>
