@@ -120,7 +120,6 @@ $(document).on('pagebeforeshow', '#home', function(event) {
 
 function pagepage() {
 	var str = JSON.parse(localStorage.getItem("str"));
-	console.log(str);
 	var list = getList();
 	var element = list[str].title + '<br>' + 'Creator: ' + list[str].creator + '<br>' + 'Minecraftversion: ' + list[str].version;
 	$('#info1').append(element);
