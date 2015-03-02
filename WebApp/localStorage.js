@@ -10,7 +10,7 @@ function submit() {
 	var list = getList();
 	var img = getImages();
 	// Push the new items into the existing list
-	data.push({
+	list.push({
 		title : title,
 		creator : creator,
 		version : version,
@@ -18,7 +18,7 @@ function submit() {
 		img : img
 	});
 	//Add the objects array to the list of pages
-	list.push(data);
+	//list.push(data);
 	saveList(list);
 
 	localStorage.removeItem("images");
@@ -102,10 +102,10 @@ function homepage() {
 	// Fetch the existing objects
 	list = getList();
 	// Clear the list of items already displayed on the homepage
-	$('#items').find('li').remove();
+	//$('#items').find('li').remove();
 	// Show the title and the first images
 	$.each(list, function(index, item) {
-		element = '<li> <a href="page.html" rel="external" data-transition="slide" onclick="pagepage();"> <h1>' + item[0].title + '</h1> <img src=' + item[0].img.src + 'class="thumbnail" /> </a> </li>';
+		element = '<li> <a href="page.html" rel="external" data-transition="slide" onclick="setPageIndex(' + index + ');"> <h1>' + item.title + '</h1> <img src=' + item.img.src + 'class="thumbnail" /> </a> </li>';
 		$('#items').append(element);
 	});
 
@@ -119,17 +119,19 @@ $(document).on('pagebeforeshow', '#home', function(event) {
 });
 
 function pagepage() {
-	$("li").click(function() {
-		var str = $(this).index();
-	});
-	
-	list = getList();
-	var element = list[0].title + '<br>' + 'Creator: ' + list[0].creator + '<br>' + 'Minecraftversion: ' + list[0].version;
+	var str = JSON.parse(localStorage.getItem("str"));
+	console.log(str);
+	var list = getList();
+	var element = list[str].title + '<br>' + 'Creator: ' + list[str].creator + '<br>' + 'Minecraftversion: ' + list[str].version;
 	$('#info1').append(element);
-	element = list[0].text;
+	element = list[str].text;
+	console.log(list);
 	$('#info2').append(element);
 }
 
+function setPageIndex(str) {
+	localStorage.setItem("str", JSON.stringify(str));
+};
 
 $(document).on('pagebeforeshow', '#page', function(event) {
 	pagepage();
