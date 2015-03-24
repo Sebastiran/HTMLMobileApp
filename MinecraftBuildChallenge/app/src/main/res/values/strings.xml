@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BuildChallenge</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_menu_add">Add assignment</string>
+    <string name="main_list_empty">There are no assignments</string>
+    <string name="title_activity_add_assigment">AddAssigmentActivity</string>
+    <string name="add_build_hint">What to build</string>
+    <string name="add_block_hint">With</string>
+    <string name="add_biome_hint">In</string>
+    <string name="add_assignment_save">Save assignment</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="title_activity_add_assignment">AddAssignmentActivity</string>
+
+    <string name="assignment_text1">Build a(n)</string>
+    <string name="assignment_text2">With</string>
+    <string name="assignment_text3">in the Biome</string>
+
+</resources>
