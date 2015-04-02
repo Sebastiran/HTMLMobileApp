@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Minesperation</title>
+		<title>Textbooks</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="themes/mytheme.css" />
 		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -9,55 +9,23 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="localStorage.js"></script>
-		<link rel="stylesheet" href="styles.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
-		<div data-role="page" id="home" data-theme="d">
+		<div data-role="page" id="post" data-theme="d">
 			<header data-role="header">
-				<h1>Minesperation</h1>
-				<a href="post.html" rel="external" data-icon="grid" data-transition="slide">Post your own!</a>
+				<h1>Textbooks</h1>
 			</header>
-			<article data-role="content">
-				<ul id="items" data-role="listview" data-filter="true" data-inset="true">
-					<li>
-						<a href="pages/gate.html" rel="external" data-transition="slide"> <h1>NetherPortal</h1> <img src="images/gate1.jpg" class="thumbnail" alt="GATE" /> </a>
-						<p style="display: none">Nether, Portal</p>
-					</li>
-					<li>
-						<a href="pages/mushroom.html" rel="external" data-transition="slide"> <h1>Mushroom Island</h1> <img src="images/mushroomIsland.jpg" class="thumbnail" alt="SHROOMS" /> </a>
-						<p style="display: none">Mushroom, Nature, Island</p>
-					</li>
-					<li>
-						<a href="pages/temple.html" rel="external" data-transition="slide"> <h1>Jungle Temple</h1> <img src="images/temple1.jpg" class="thumbnail" alt="TEMPLE" /> </a>
-						<p style="display: none">Jungle, Temple, Ruins, House</p>
-					</li>
-					<li>
-						<a href="pages/windmill.html" rel="external" data-transition="slide"> <h1>Windmill</h1> <img src="images/Windmill.jpg" class="thumbnail" alt="MILL" /> </a>
-						<p style="display: none">Windmill, Farm, Building</p>
-					</li>
-					<!--<li>
-						<a href="pages/hobbitHole.html" rel="external" data-transition="slide"> <h1>HobbitHole</h1> <img src="images/HobbitHole.jpg" class="thumbnail" alt="HOLE" /> </a>
-						<p style="display: none">House, Hobbit, Hole, Garden</p>
-					</li>
-					<li>
-						<a href="pages/arena.html" rel="external" data-transition="slide"> <h1>PvP Arena</h1> <img src="images/Arena1.jpg" class="thumbnail" alt="ARENA" /> </a>
-						<p style="display: none">Arena, PvP, Fight, Building</p>
-					</li>
-					<li>
-						<a href="pages/castle.html" rel="external" data-transition="slide"> <h1>Castle</h1> <img src="images/Castle.jpg" class="thumbnail" alt="CASTLE" /> </a>
-						<p style="display: none">Castel, Building, House, Middle-age</p>
-					</li>
-					<li>
-						<a href="pages/ruins.html" rel="external" data-transition="slide"> <h1>Ruins</h1> <img src="images/Ruins.jpg" class="thumbnail" alt="RUINS" /> </a>
-						<p style="display: none">Ruins</p>
-					</li>
-					<li>
-						<a href="pages/university.html" rel="external" data-transition="slide"> <h1>University</h1> <img src="images/University.jpg" class="thumbnail" alt="UNIVERSITY" /> </a>
-						<p style="display: none">University, Building, School</p>
-					</li>-->
-				</ul>
-			</article>
+			<div data-role="content">
+				<input type="text" name="title" id="item-1" placeholder="Please enter book title">
+				<input type="text" name="author" id="item-2" placeholder="Please enter book author">
+				<input type="submit" name="submit" id="submit" onclick="submit();" value="Add Book">
+				<a href="post.html" rel="external" class="ui-btn" data-transition="slide">Show Books</a>
+			</div>
+			<footer data-role="footer" data-position="fixed">
+				<h1>Exam April 7th 2015</h1>
+			</footer>
 		</div>
 	</body>
 </html>
+

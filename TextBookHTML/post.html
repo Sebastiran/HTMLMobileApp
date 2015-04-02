@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Minesperation</title>
+		<title>Textbooks</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="themes/mytheme.css" />
 		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -9,29 +9,21 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="localStorage.js"></script>
-		<link rel="stylesheet" href="styles.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
-		<div data-role="page" id="post" data-theme="d">
+		<div data-role="page" id="books" data-theme="d">
 			<header data-role="header">
-				<h1>Minespiration</h1>
+				<h1>Overview</h1>
 				<a href="index.html" rel="external" data-icon="home" data-transition="slide" data-direction="reverse">Back</a>
 			</header>
-			<div data-role="content">
-				<label for="item-1">Title</label>
-				<input type="text" name="title" id="item-1" placeholder="">
-				<label for="item-2">Creator(s)</label>
-				<input type="text" name="creator" id="item-2" placeholder="">
-				<label for="item-3">Minecraft version build</label>
-				<input type="text" name="version" id="item-3" placeholder="">
-				<label for="item-4">Textfield</label>
-				<input type="text" name="text" id="item-4" placeholder="type your text here..">
-				<label for="item-5">Select image(s)</label>
-				<input type="file" name="img" id="item-5" onchange="addImage();">
-				<ul id="images" data‐role="listview" data‐inset="true" style="margin-bottom: 10px; margin-top: 10px;"></ul>
-				<input type="submit" name="submit" id="submit" onclick="submit();" value="Submit">
-			</div>
+			<article data-role="content">
+				<ul id="items" data-role="listview" data-filter="true" data-inset="true">
+					<li data-role="list-divider">Books</li>
+			</article>
+			<footer data-role="footer" data-position="fixed">
+				<h1>Exam April 7th 2015</h1>
+			</footer>
 		</div>
 	</body>
 </html>

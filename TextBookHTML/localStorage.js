@@ -1,111 +1,46 @@
 function submit() {
-	//localStorage.removeItem("list");
+	localStorage.removeItem("objects");
 	// Retrieve the entered form data
 	var title = $('[name="title"]').val();
-	var creator = $('[name="creator"]').val();
-	var version = $('[name="version"]').val();
-	var text = $('[name="text"]').val();
-
-	var data = new Array();
-	var list = getList();
-	var img = getImages();
-	// Push the new items into the existing list
-	list.push({
+	var author = $('[name="author"]').val();
+	// Fetch the existing objects
+	var objects = getObjects();
+	// Push the new item into the existing list
+	objects.push({
 		title : title,
-		creator : creator,
-		version : version,
-		text : text,
-		img : img
+		author : author
 	});
-	//Add the objects array to the list of pages
-	//list.push(data);
-	saveList(list);
-
-	localStorage.removeItem("images");
+	// Store the new list
+	saveObjects(objects);
 	// Reload the page to show the new objects
 	window.location.reload();
 }
 
-function addImage() {
-	// Retrieve the entered form data
-	var image = $('[name="img"]').val();
-	// Fetch the existing objects
-
-	var images = getImages();
-	// Push the new item into the existing list
-	images.push({
-		image : image
-	});
-	// Store the new list
-	saveImages(images);
-	// Reload the list
-	postpage();
-}
-
-function getImages() {
+function getObjects() {
 	// See if objects is inside localStorage
-	if (localStorage.getItem("images")) {
+	if (localStorage.getItem("objects")) {
 		// If yes, then load the objects
-		images = JSON.parse(localStorage.getItem("images"));
+		objects = JSON.parse(localStorage.getItem("objects"));
 	} else {
 		// Make a new array of objects
-		images = new Array();
+		objects = new Array();
 	}
-	return images;
+	return objects;
 }
 
-function saveImages(images) {
+function saveObjects(objects) {
 	// Save the list into localStorage
-	localStorage.setItem("images", JSON.stringify(images));
+	localStorage.setItem("objects", JSON.stringify(objects));
 }
 
-function getList() {
-	// See if objects is inside localStorage
-	if (localStorage.getItem("list")) {
-		// If yes, then load the objects
-		list = JSON.parse(localStorage.getItem("list"));
-	} else {
-		// Make a new array of objects
-		list = new Array();
-	}
-	return list;
-}
-
-function saveList(list) {
-	// Save the list into localStorage
-	localStorage.setItem("list", JSON.stringify(list));
-}
-
-function postpage() {
+function showBooksPage() {
 	// Fetch the existing objects
-	images = getImages();
+	objects = getObjects();
 	// Clear the list
-	$('#images').find('li').remove();
-	// Add every object to the objects list
-	$.each(images, function(index, item) {
-		var str = item.image;
-		var split = str.split("\\");
-		element = '<li>' + split[split.length - 1] + '</li>';
-		$('#images').append(element);
-	});
-
-	$('#images').listview();
-	$('#images').listview("refresh");
-}
-
-
-$(document).on('pagebeforeshow', '#post', function(event) {
-	postpage();
-});
-
-function homepage() {
-	// Fetch the existing objects
-	list = getList();
-	// Clear the list of items already displayed on the homepage
 	//$('#items').find('li').remove();
-	// Show the title and the first images
-	$.each(list, function(index, item) {
-		element = '<li> <a href="page.html" rel="external" data-transition="slide" onclick="setPageIndex(' + index + ');"> <h1>' + item.title + '</h1> <img src=' + item.img.src + 'class="thumbnail" /> </a> </li>';
+	// Add every object to the objects list
+	$.each(objects, function(index, item) {
+		element = '<li>' + item.title + " - " + item.author + '</li>';
 		$('#items').append(element);
 	});
 
@@ -114,24 +49,6 @@ function homepage() {
 }
 
 
-$(document).on('pagebeforeshow', '#home', function(event) {
-	homepage();
-});
-
-function pagepage() {
-	var str = JSON.parse(localStorage.getItem("str"));
-	var list = getList();
-	var element = list[str].title + '<br>' + 'Creator: ' + list[str].creator + '<br>' + 'Minecraftversion: ' + list[str].version;
-	$('#info1').append(element);
-	element = list[str].text;
-	console.log(list);
-	$('#info2').append(element);
-}
-
-function setPageIndex(str) {
-	localStorage.setItem("str", JSON.stringify(str));
-};
-
-$(document).on('pagebeforeshow', '#page', function(event) {
-	pagepage();
+$(document).on('pagebeforeshow', '#books', function(event) {
+	showBooksPage();
 });
