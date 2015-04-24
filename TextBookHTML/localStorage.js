@@ -1,5 +1,4 @@
 function submit() {
-	localStorage.removeItem("objects");
 	// Retrieve the entered form data
 	var title = $('[name="title"]').val();
 	var author = $('[name="author"]').val();
@@ -36,8 +35,6 @@ function saveObjects(objects) {
 function showBooksPage() {
 	// Fetch the existing objects
 	objects = getObjects();
-	// Clear the list
-	//$('#items').find('li').remove();
 	// Add every object to the objects list
 	$.each(objects, function(index, item) {
 		element = '<li>' + item.title + " - " + item.author + '</li>';
